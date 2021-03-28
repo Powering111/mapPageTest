@@ -3,9 +3,36 @@
   <head>
     <title>hi</title>
     <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript">
+    window.addEventListener('DOMContentLoaded',bindEvent);
+      function bindEvent(){
+        document.getElementById("bongwanArea").addEventListener('mouseover',updateDescription);
+      }
+      function doSomething(){
+        alert("I did something");
+      }
+      function updateDescription(){
+        document.getElementById('description').innerHTML='본관';
+      }
+    </script>
   </head>
   <body>
-    <img src="./testImg.jpg" alt="GSHS">
-    
+
+    <map name="bongwan">
+    <area shape="poly" coords="69,230,62,290,75,293,122,306,148,320,139,348,399,346,398,216,357,203,302,199,247,209,240,226,208,224,89,239,86,226"
+           color="#FFFF00" onclick="doSomething()" id="bongwanArea"
+          target="_blank" alt="본관"  />
+      </map>
+      <img usemap = "#bongwan" src="./testImg.jpg" alt="GSHS">
+    <h1 id="description"></h1>
   </body>
 </html>
+
+
+
+<!--
+href="./bongwan.html"
+
+
+
+!-->
