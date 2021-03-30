@@ -2,3 +2,19 @@
 area{
   background-color:black;
 }
+canvas{
+  position:absolute;
+  left:0px;top:0px;padding:0px;border:0px;
+}
+.map{
+  display:block;
+  background:url("./testImg.jpg") 0% 0%/800px 450px;
+  position:relative;
+  padding:0px;
+  width:800px;height:450px;
+}
+#mapImg{
+  opacity: 1e-10;
+  position:absolute;
+  left: 0;top: 0;padding: 0px;border: 0px;
+}

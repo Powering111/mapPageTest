@@ -3,7 +3,12 @@
   <head>
     <title>hi</title>
     <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./jqyery.maphilight.js"></script>
     <script type="text/javascript">
+    $(function(){
+      $('.map').maphilight();
+    })
     window.addEventListener('DOMContentLoaded',bindEvent);
       function bindEvent(){
         document.getElementById("bongwanArea").addEventListener('mouseover',updateDescription);
@@ -17,13 +22,17 @@
     </script>
   </head>
   <body>
-
+    <div class='map'>
+      <canvas width="800" height="450"></canvas>
+      <canvas width="800" height="450" style="opacity:1"></canvas>
+      <img id="mapImg" usemap="#bongwan" class="map maphilighted" width="800" height="450" src="./testImg.jpg" alt="GSHS">
+    </div>
     <map name="bongwan">
-    <area shape="poly" coords="69,230,62,290,75,293,122,306,148,320,139,348,399,346,398,216,357,203,302,199,247,209,240,226,208,224,89,239,86,226"
-           color="#FFFF00" onclick="doSomething()" id="bongwanArea"
+        <area shape="poly" coords="69,230,62,290,75,293,122,306,148,320,139,348,399,346,398,216,357,203,302,199,247,209,240,226,208,224,89,239,86,226"
+           color="#FFFF00" onclick="doSomething()" id="bongwanArea" data-maphilight='{"strokeColor":"0000ff","strokewidth":5,"fillColor":"abcdef"}'
           target="_blank" alt="본관"  />
       </map>
-      <img usemap = "#bongwan" src="./testImg.jpg" alt="GSHS">
+
     <h1 id="description"></h1>
   </body>
 </html>
@@ -33,6 +42,6 @@
 <!--
 href="./bongwan.html"
 
-
+<img usemap = "#bongwan" src="./testImg.jpg" alt="GSHS">
 
 !-->
